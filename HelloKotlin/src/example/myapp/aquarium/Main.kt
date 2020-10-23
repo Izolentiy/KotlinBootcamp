@@ -1,4 +1,4 @@
-package example.myapp
+package example.myapp.aquarium
 
 fun buildAquarium() {
     // Default

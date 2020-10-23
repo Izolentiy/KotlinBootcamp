@@ -1,4 +1,4 @@
-package example.myapp
+package example.myapp.aquarium
 
 interface FishAction {
     fun eat()
@@ -53,6 +53,6 @@ class Shark(fishColor: FishColor = GoldColor) :
 }
 
 class Plecostomus : FishAction by PrintingFishAction("eat algae"),
-    FishColor by GoldColor{
+    FishColor by GoldColor {
     override fun eat() = println("eat algae")
 }
