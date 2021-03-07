@@ -27,6 +27,15 @@ fun testAnnotations() {
     println(myAnnotationObject)
 }
 
+fun labels() {
+    outerLoop@ for (i in 1..100) {
+        print("$i ")
+        for (j in 1..100) {
+            if (i > 10) break@outerLoop  // breaks to outer loop
+        }
+    }
+}
+
 //------
 annotation class ImAPlant
 
@@ -37,5 +46,7 @@ annotation class OnSet
 
 //-------------main
 fun main () {
-    testAnnotations()
+//    testAnnotations()
+
+    labels()
 }
